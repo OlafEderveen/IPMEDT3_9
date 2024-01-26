@@ -100,7 +100,7 @@ function pringles() {
 function endCheck() {
   const kleur = document.getElementById("js--end").getAttribute("color");
   if(kleur == "green"){
-    location.href="https://www.ing.nl/particulier/klantenservice/beschikbaarheid/index.html";}
+    location.href="index.html";}
   }
 window.onload = function() {
  main();
