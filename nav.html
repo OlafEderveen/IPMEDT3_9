@@ -5,37 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>    
-    <script src="/main.js"></script>
+    <script src="/nav.js"></script>
     <title>Find the movie room!</title>
 </head>
 <body>
     <a-scene physics="debug: true">
-        <a-assets>
+        <a-nav>
             <img
 			  id="space"
-			  src="/assets/images/space.jpg"
+			  src="/nav/images/space.jpg"
 			/>
             <img
 			  id="floor"
-			  src="/assets/images/floor.jpg"
+			  src="/nav/images/floor.jpg"
 			/>
             <img
 			  id="wall"
-			  src="/assets/images/walls.jpg"
+			  src="/nav/images/walls.jpg"
 			/><img
 			  id="plafond"
-			  src="/assets/images/plafond.jpg"
+			  src="/nav/images/plafond.jpg"
 			/>
             <img
 			  id="arrowUp"
-			  src="/assets/images/arrow_up.png"
+			  src="/nav/images/arrow_up.png"
 			/>
-            <a-assets-item id="door-obj" src="/assets/blender/door.obj"></a-assets-item>
-            <a-assets-item id="door-mtl" src="/assets/blender/door.mtl"></a-assets-item>
-            <a-assets-item id="escalator-obj" src="/assets/blender/escalator.obj"></a-assets-item>
-            <a-assets-item id="escalator-mtl" src="/assets/blender/escalator.mtl"></a-assets-item>
-            <audio id="music" src="/assets/audio/sparkle.mp3" preload="auto"></audio>
-        </a-assets>
+            <a-nav-item id="door-obj" src="/nav/blender/door.obj"></a-nav-item>
+            <a-nav-item id="door-mtl" src="/nav/blender/door.mtl"></a-nav-item>
+            <a-nav-item id="escalator-obj" src="/nav/blender/escalator.obj"></a-nav-item>
+            <a-nav-item id="escalator-mtl" src="/nav/blender/escalator.mtl"></a-nav-item>
+            <audio id="music" src="/nav/audio/sparkle.mp3" preload="auto"></audio>
+        </a-nav>
 
         <a-camera 
         dynamic-body
@@ -61,45 +61,45 @@
         <a-entity
             id="muur_main">
                 <!-- voor -->
-                <a-plane static-body class="js--walls" position="0 2.5 24" rotation="0 180 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="0 2.5 24" rotation="0 0 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 2.5 24" rotation="0 180 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 2.5 24" rotation="0 0 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
                 <!-- achter -->
-                <a-plane static-body class="js--walls" position="0 2.5 -36" rotation="0 180 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="0 2.5 -36" rotation="0 0 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 2.5 -36" rotation="0 180 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 2.5 -36" rotation="0 0 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
                 <!-- rechts -->
-                <a-plane static-body class="js--walls" position="50 2.5 -1" rotation="0 -90 0" height="13" width="50" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 2.5 -1" rotation="0 90 0" height="13" width="50" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -1" rotation="0 -90 0" height="13" width="50" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -1" rotation="0 90 0" height="13" width="50" src="nav/images/walls.jpg"></a-plane>
                 <a-obj-model position="40 -1 -27.8" rotation="0 -90 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
-                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 -90 0" height="13" width="6.5" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 90 0" height="13" width="6.5" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 7 -28" rotation="0 -90 0" height="5" width="4" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 7 -28" rotation="0 90 0" height="5" width="4" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 -90 0" height="13" width="6.5" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 90 0" height="13" width="6.5" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 7 -28" rotation="0 -90 0" height="5" width="4" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 7 -28" rotation="0 90 0" height="5" width="4" src="nav/images/walls.jpg"></a-plane>
             </a-entity>
         <!-- vloer -->
-        <a-plane static-body class="js--walls" position="0 -1.01 -6" rotation="-90 0 0" height="60" width="100" src="assets/images/floor.jpg" roughness="0"></a-plane>
+        <a-plane static-body class="js--walls" position="0 -1.01 -6" rotation="-90 0 0" height="60" width="100" src="nav/images/floor.jpg" roughness="0"></a-plane>
         <a-entity
         id="ingang"
         position="-42.5 0 18">
         
             
-            <a-plane static-body class="js--walls" position="0 6 -6" rotation="90 0 0" height="24" width="15" src="assets/images/plafond.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="0 6 -6" rotation="90 0 0" height="24" width="15" src="nav/images/plafond.jpg"></a-plane>
             <!-- achter -->
-            <a-plane static-body class="js--walls" static-body class="collidable" position="0 2.5 -18" rotation="0 180 0" height="13" width="15" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" static-body class="collidable" position="0 2.5 -18" rotation="0 0 0" height="13" width="15" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" static-body class="collidable" position="0 2.5 -18" rotation="0 180 0" height="13" width="15" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" static-body class="collidable" position="0 2.5 -18" rotation="0 0 0" height="13" width="15" src="nav/images/walls.jpg"></a-plane>
             <!-- links -->
-            <a-plane static-body class="js--walls" position="-7.5 2.5 -23.5" rotation="0 -90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-7.5 2.5 -23.5" rotation="0 90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-7.5 2.5 -23.5" rotation="0 -90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-7.5 2.5 -23.5" rotation="0 90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
             <!-- rechts -->
             <a-entity
             id="muur_rechts">
-                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 -90 0" height="13" width="18" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 90 0" height="13" width="18" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 -90 0" height="13" width="18" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 90 0" height="13" width="18" src="nav/images/walls.jpg"></a-plane>
             </a-entity>
             <a-obj-model position="17.45 -1 -13.8" rotation="0 90 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
-            <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 -90 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 90 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="7.5 2.5 -16.9" rotation="0 -90 0" height="13" width="2.5" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="7.5 2.5 -16.9" rotation="0 90 0" height="13" width="2.5" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 -90 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 90 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="7.5 2.5 -16.9" rotation="0 -90 0" height="13" width="2.5" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="7.5 2.5 -16.9" rotation="0 90 0" height="13" width="2.5" src="nav/images/walls.jpg"></a-plane>
 
         </a-entity>
 
@@ -113,27 +113,27 @@
         position="-42.5 0 -6.15">
             <a-entity
             id="muur_links">
-                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 -90 0" height="13" width="18" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 90 0" height="13" width="18" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 -90 0" height="13" width="18" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -3" rotation="0 90 0" height="13" width="18" src="nav/images/walls.jpg"></a-plane>
                 <a-obj-model position="17.45 -1 -13.83" rotation="0 90 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
-                <a-plane static-body class="js--walls" position="7.5 2.5 -22.5" rotation="0 -90 0" height="13" width="14" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="7.5 2.5 -22.5" rotation="0 90 0" height="13" width="14" src="assets/images/walls.jpg"></a-plane>
-                <!-- <a-plane static-body class="js--walls" position="0 6 -11.5" rotation="90 0 0" height="35" width="15" src="assets/images/plafond.jpg"></a-plane> -->
-                <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 -90 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 90 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -22.5" rotation="0 -90 0" height="13" width="14" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 2.5 -22.5" rotation="0 90 0" height="13" width="14" src="nav/images/walls.jpg"></a-plane>
+                <!-- <a-plane static-body class="js--walls" position="0 6 -11.5" rotation="90 0 0" height="35" width="15" src="nav/images/plafond.jpg"></a-plane> -->
+                <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 -90 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="7.5 6.5 -14" rotation="0 90 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
             </a-entity>
             <a-entity
             id="muur_rechts">
-                <a-plane static-body class="js--walls" position="16 2.3 7.6" rotation="0 -90 0" height="13" width="45" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="16 2.3 7.6" rotation="0 90 0" height="13" width="45" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="16 2.3 7.6" rotation="0 -90 0" height="13" width="45" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="16 2.3 7.6" rotation="0 90 0" height="13" width="45" src="nav/images/walls.jpg"></a-plane>
             </a-entity> 
         </a-entity>
 
 
         <!-- zaal 1 -->
         <!-- achter -->
-        <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
 
         <!-- deurknop -->
         <a-obj-model position="-18.8 -1 -31" rotation="0 180 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
@@ -141,17 +141,17 @@
         </a-sphere>
 
         
-        <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
         
-        <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
 
         <!-- rechts -->
         <a-entity
         id="muur_rechts">
-            <a-plane static-body class="js--walls" position=" -11 2.3 1.5" rotation="0 -90 0" height="13" width="45" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-11 2.3 1.5" rotation="0 90 0" height="13" width="45" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position=" -11 2.3 1.5" rotation="0 -90 0" height="13" width="45" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-11 2.3 1.5" rotation="0 90 0" height="13" width="45" src="nav/images/walls.jpg"></a-plane>
         </a-entity>
         <!-- text -->
         <a-text value="Zaal" 
@@ -162,27 +162,27 @@
 
         <!-- zaal 2 --> 
         <!-- links -->
-        <a-plane static-body class="js--walls" position="5 2.3 -16" rotation="0 -90 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="5 2.3 -16" rotation="0 90 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="5 2.3 -16" rotation="0 -90 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="5 2.3 -16" rotation="0 90 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>
         <!-- rechts -->
-        <a-plane static-body class="js--walls" position="18 2.3 -16" rotation="0 -90 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="18 2.3 -16" rotation="0 90 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>        
+        <a-plane static-body class="js--walls" position="18 2.3 -16" rotation="0 -90 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="18 2.3 -16" rotation="0 90 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>        
         <!-- voor -->
         <a-entity
         id="deur"
         position="-4.25 0 -17"
         rotation="0 180 0"
         scale="0.84 1 1">
-            <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 2.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
 
             <a-obj-model position="-18.8 -1 -31" rotation="0 180 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
             
-            <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 2.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
             
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
         </a-entity>
         <a-sphere id="toNextScene" position="11.5 1 4.5w" rotation="0 90 0" scale="0.2 0.5 0.5 0.2" color="#E62020" class="js--clickable" onclick="toNextScene()">
         </a-sphere>
@@ -194,8 +194,8 @@
        
 
         <!-- escalator -->
-        <a-plane static-body class="js--walls" position="19 15.5 -25" rotation="0 -90 0" height="13" width="23" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="19 15.5 -25" rotation="0 90 0" height="13" width="23" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="19 15.5 -25" rotation="0 -90 0" height="13" width="23" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="19 15.5 -25" rotation="0 90 0" height="13" width="23" src="nav/images/walls.jpg"></a-plane>
         <a-obj-model position="30 -1 -10" rotation="0 0 0" src="#escalator-obj" mtl="#escalator-mtl" scale="3 3 3 3"></a-obj-model>
         <a-obj-model position="30 -1 -1" rotation="0 0 0" src="#escalator-obj" mtl="#escalator-mtl" scale="3 3 3 3"></a-obj-model>
         <a-sphere
@@ -208,8 +208,8 @@
             position="37 2 -1"
             radius="1" >
         </a-sphere>
-        <a-plane static-body class="js--walls" position="19 15.5 13.5" rotation="0 -90 0" height="13" width="21" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="19 15.5 13.5" rotation="0 90 0" height="13" width="21" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="19 15.5 13.5" rotation="0 -90 0" height="13" width="21" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="19 15.5 13.5" rotation="0 90 0" height="13" width="21" src="nav/images/walls.jpg"></a-plane>
         <a-text value="Zaal" 
         text-align="center" rotation="0 -90 0" color="white" position="49.8 6 17.5" scale="6 6 6 6"></a-text></a-plane>
         <a-text value="3 + 4" 
@@ -219,8 +219,8 @@
 
         <!-- zaal 3 -->        
         <!-- achter -->
-        <a-plane static-body class="js--walls" position="-6 15.5 3" rotation="0 180 0" height="13" width="50" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="-6 15.5 3" rotation="0 0 0" height="13" width="50" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-6 15.5 3" rotation="0 180 0" height="13" width="50" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-6 15.5 3" rotation="0 0 0" height="13" width="50" src="nav/images/walls.jpg"></a-plane>
         <!-- text -->
         <a-text value="Zaal" 
         text-align="center" rotation="0 90 0" color="white" position="-49 17 -3" scale="6 6 6 6"></a-text></a-plane>
@@ -231,16 +231,16 @@
         position="-16 10 24"
         rotation="0 0 0"
         scale="1.3 1.3 1">
-            <a-plane static-body class="js--walls" position="-14 5.8 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-14 5.8 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 5.8 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 5.8 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
 
             <a-obj-model position="-18.8 -1 -31" rotation="0 180 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
             
-            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
             
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
         </a-entity>
         <a-sphere id="toNextScene" position="-40.5 11 2.5" rotation="0 90 0" scale="0.2 0.5 0.5 0.2" color="#E62020" class="js--clickable" onclick="toNextScene()">
         </a-sphere>
@@ -255,16 +255,16 @@
         position="11 10.4 -51.9"
         rotation="0 90 0"
         scale="1.45 1.4 1">
-            <a-plane static-body class="js--walls" position="-14 5.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-14 5.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 5.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-14 5.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
 
             <a-obj-model position="-18.8 -1 -31" rotation="0 180 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
             
-            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 180 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 0 0" height="13" width="6" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 180 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-23.5 5.5 -21" rotation="0 0 0" height="13" width="6" src="nav/images/walls.jpg"></a-plane>
             
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
-            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="assets/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 180 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
+            <a-plane static-body class="js--walls" position="-18.8 6.5 -21" rotation="0 0 0" height="5.1" width="4" src="nav/images/walls.jpg"></a-plane>
         </a-entity>
         <!-- deurknop -->
         <a-sphere id="toNextScene" position="-9 11 -24.5" scale="0.2 0.5 0.5 0.2" color="#E62020" class="js--clickable" onclick="toNextScene()">
@@ -273,8 +273,8 @@
         
         
         <!-- voor -->
-        <a-plane static-body class="js--walls" position="-30 15.5 -13.5" rotation="0 180 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>
-        <a-plane static-body class="js--walls" position="-30 15.5 -13.5" rotation="0 0 0" height="13" width="40" src="assets/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-30 15.5 -13.5" rotation="0 180 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-30 15.5 -13.5" rotation="0 0 0" height="13" width="40" src="nav/images/walls.jpg"></a-plane>
         <a-text value="Zaal" 
         text-align="center" rotation="0 0 0" color="white" position="-5 17 -35" scale="6 6 6 6"></a-text></a-plane>
         <a-text value="4" 
@@ -290,34 +290,34 @@
 
 
         <!-- plafond -->
-        <a-plane static-body class="js--walls" position="-16 9 -6" rotation="90 0 0" height="60" width="70" src="assets/images/plafond.jpg"></a-plane>
+        <a-plane static-body class="js--walls" position="-16 9 -6" rotation="90 0 0" height="60" width="70" src="nav/images/plafond.jpg"></a-plane>
         <!-- vloer bovend -->
-        <a-plane static-body class="js--walls" position="-16 9 -6" rotation="-90 0 0" height="60" width="70" src="assets/images/floor.jpg" roughness="0"></a-plane>
+        <a-plane static-body class="js--walls" position="-16 9 -6" rotation="-90 0 0" height="60" width="70" src="nav/images/floor.jpg" roughness="0"></a-plane>
 
         <!-- muren boven -->
         <a-entity
             id="muur_main">
                 <!-- voor -->
-                <a-plane static-body class="js--walls" position="0 15 24" rotation="0 180 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="0 15 24" rotation="0 0 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 15 24" rotation="0 180 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 15 24" rotation="0 0 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
                 <!-- achter -->
-                <a-plane static-body class="js--walls" position="0 15 -36" rotation="0 180 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="0 15 -36" rotation="0 0 0" height="13" width="100" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 15 -36" rotation="0 180 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="0 15 -36" rotation="0 0 0" height="13" width="100" src="nav/images/walls.jpg"></a-plane>
                 <!-- links -->
-                <a-plane static-body class="js--walls" position="-50 15 -6" rotation="0 -90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="-50 15 -6" rotation="0 90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="-50 15 -6" rotation="0 -90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="-50 15 -6" rotation="0 90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
                 <!-- rechts -->
-                <a-plane static-body class="js--walls" position="50 15 -6" rotation="0 -90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 15 -6" rotation="0 90 0" height="13" width="60" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 15 -6" rotation="0 -90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 15 -6" rotation="0 90 0" height="13" width="60" src="nav/images/walls.jpg"></a-plane>
                 <a-obj-model position="40 -1 -27.8" rotation="0 -90 0" src="#door-obj" mtl="#door-mtl" scale="3 3 3 3"></a-obj-model>
-                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 -90 0" height="13" width="6.5" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 90 0" height="13" width="6.5" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 5 -28" rotation="0 -90 0" height="2.2" width="4" src="assets/images/walls.jpg"></a-plane>
-                <a-plane static-body class="js--walls" position="50 5 -28" rotation="0 90 0" height="2.2" width="4" src="assets/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 -90 0" height="13" width="6.5" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 2.5 -32.9" rotation="0 90 0" height="13" width="6.5" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 5 -28" rotation="0 -90 0" height="2.2" width="4" src="nav/images/walls.jpg"></a-plane>
+                <a-plane static-body class="js--walls" position="50 5 -28" rotation="0 90 0" height="2.2" width="4" src="nav/images/walls.jpg"></a-plane>
         </a-entity>
 
          <!-- plafond -->
-         <a-plane static-body class="js--walls" position="0 21.5 -6" rotation="90 0 0" height="60" width="100" src="assets/images/plafond.jpg"></a-plane>
+         <a-plane static-body class="js--walls" position="0 21.5 -6" rotation="90 0 0" height="60" width="100" src="nav/images/plafond.jpg"></a-plane>
 
     
 
