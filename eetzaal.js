@@ -100,7 +100,7 @@ function pringles() {
 function endCheck() {
   const kleur = document.getElementById("js--end").getAttribute("color");
   if(kleur == "green"){
-    location.href="index.html";}
+    location.href="nav.html";}
   }
 window.onload = function() {
  main();
