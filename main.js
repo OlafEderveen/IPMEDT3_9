@@ -16,7 +16,7 @@ function updateMovieChosen() {
 function toNextScene(){
     color = document.getElementById('toNextScene').getAttribute('color');
     if(color == '#00ff00'){
-        location.href="https://www.ing.nl/particulier/klantenservice/beschikbaarheid/index.html";}
+        location.href="eetzaal.html";}
 }
 
 const cameraClicked = (event) => {
